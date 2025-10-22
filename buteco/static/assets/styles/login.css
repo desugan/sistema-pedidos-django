@@ -96,6 +96,7 @@ p {
 #login, .logo{
     display:inline-block;
     width:80%;
+    margin-left: 10px;
 }
 #login{
 border-right:1px solid #fff;
