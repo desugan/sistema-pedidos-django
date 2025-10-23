@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     if request.user.is_authenticated:
-        return redirect('pedidos:criar_pedido')
+        return redirect('pedido')
     return redirect('login')
 
 def login(request):
