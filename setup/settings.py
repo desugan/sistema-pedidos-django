@@ -2,6 +2,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from decouple import config
 
 load_dotenv()
 
@@ -68,10 +69,18 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'buteco',
+        'USER': 'root',
+        'PASSWORD': 'yK-pNhOPUd-[*2RY',
+        'HOST': 'localhost',  # ou IP do servidor MySQL
+        'PORT': '3306',       # porta padrão do MySQL
+        'OPTIONS': {
+            'charset': 'utf8mb4',  # importante para suportar acentuação e emojis
+        },
     }
 }
 
